@@ -23,3 +23,6 @@ int cols = driver.findElements(By.xpath("//table[@class='dataTable']/tbody/tr[1]
 		
 ********************
 https://tutorialehtml.com/en/html-tutorial-radio-buttons/
+
+***multivalue dropdown******
+https://www.w3schools.com/tags/tryit.asp?filename=tryhtml_select_multiple
