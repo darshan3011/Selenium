@@ -21,3 +21,5 @@ int cols = driver.findElements(By.xpath("//table[@class='dataTable']/tbody/tr[1]
 		System.out.println("Total names " +names.size());
 		System.out.println("Total Prices "+currentPrices.size());
 		
+********************
+https://tutorialehtml.com/en/html-tutorial-radio-buttons/
