@@ -1,0 +1,131 @@
+TESTNG - unit testing framework
+
+open-source,free
+JAR files
+
+Features
+--Java unit testing framework
+--Html reports
+--annotations
+--priorties/sequence
+--dependency on other test cases
+--grouping
+--Data provider
+
+TDD test driven development
+
+Install TestNG in eclipse
+
+**Annotations(prefix with @)**
+-AfterClass
+-AfterMethod
+-AfterSuite
+-AfterTest
+-BeforeClass
+-BeforeMethod
+-BeforeSuite
+-BeforeTest
+-Test
+
+**Sequence**
+BeforeSuite
+BeforeTest
+BeforeClass
+BeforeMethod
+Test
+AfterMethod
+AfterClas
+AfterTest
+AfterMethod
+
+**grouping**
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="Sample Suite">
+  <test name="testing">
+  	<groups>
+      <run>
+        <include name="Regression"/>
+      </run>
+    </groups>
+    <classes>
+       <class name="com.example.group.groupExamples" />
+    </classes>
+  </test>
+</suite>
+
+**Skip Test***
+@Test(enabled=false)
+
+**Priority***
+@Test(priority=1)
+
+**Classlevel**
+
+**Multiple Test execution***
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="Sample Suite" verbose="1" >
+  <test name="Unit Level Test" >
+    <classes>
+       <class name=”com.AddTestCase" />
+<class name=”com.easy.entry.EditTestCase" />
+    </classes>
+  </test>
+  <test name="Regression Test">
+    <classes>
+      <class name=”com.AddUserTestCase" />
+<class name=”com.easy.records.DeleteUserTestCase" />
+    </classes>
+  </test>
+</suite>
+
+**include and exclude method**
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="Sample Test Suite" verbose="1" >
+  <test name="Method Test Cases" >
+    <classes>
+       <class name="IncludeExclude">
+        <methods>
+        <include name="addLocationTestCase" />
+        <include name="addDepartmentTestCase" />
+        <exclude name="addEmployeeTestCase" />
+      </methods>
+       </class>
+    </classes>
+  </test>
+</suite>
+
+
+**parameters**
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Parameterization Test Suite">
+	<test name="Testing Parameterization">
+	<parameter name="browser" value="Firefox"/>
+	<parameter name="username" value="testuser"/>
+	<parameter name="password" value="testpassword"/>
+		<classes>
+			<class name="TestParameters" />
+		</classes>
+	</test>
+</suite>
+
+**Parallel Execution method**
+<suite name="Parallel test suite" parallel="methods" thread-count="2">
+  <test name="Regression 1">
+    <classes>
+      <class name="com.parallel.TestParallelOne"/>
+    </classes>
+  </test>
+</suite>
+
+**Parallel Execution Classes**
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Parallel test suite" parallel="classes" thread-count="2">
+  <test name="Test 1">
+    <classes>
+      <class name="com.parallel.TestParallelClassOne"/>
+      <class name="com.parallel.TestParallelClassTwo"/>
+    </classes>
+  </test>
+</suite>
+
+
