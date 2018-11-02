@@ -66,14 +66,14 @@ AfterMethod
 <suite name="Sample Suite" verbose="1" >
   <test name="Unit Level Test" >
     <classes>
-       <class name=”com.AddTestCase" />
-<class name=”com.easy.entry.EditTestCase" />
+       <class name=â€com.AddTestCase" />
+<class name=â€com.easy.entry.EditTestCase" />
     </classes>
   </test>
   <test name="Regression Test">
     <classes>
-      <class name=”com.AddUserTestCase" />
-<class name=”com.easy.records.DeleteUserTestCase" />
+      <class name=â€com.AddUserTestCase" />
+<class name=â€com.easy.records.DeleteUserTestCase" />
     </classes>
   </test>
 </suite>
